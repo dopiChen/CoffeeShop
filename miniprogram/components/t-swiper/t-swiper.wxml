@@ -1,0 +1,18 @@
+
+<view class="t-swiper">
+  <swiper
+    class="t-swiper__host"
+    autoplay="{{autoplay}}"
+    interval="{{interval}}"
+    duration="{{duration}}"
+    circular="{{loop}}"
+    indicator-dots="{{indicatorDots}}"
+    indicator-color="{{indicatorColor}}"
+    indicator-active-color="{{indicatorActiveColor}}"
+    bindchange="onChange"
+  >
+    <swiper-item wx:for="{{list}}" wx:key="index" class="t-swiper__item" data-index="{{index}}" bindtap="onTap">
+      <image class="t-swiper__image" src="{{item}}" mode="aspectFill" />
+    </swiper-item>
+  </swiper>
+</view>

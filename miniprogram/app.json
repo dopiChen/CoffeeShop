@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/order/order",
+    "pages/shop/shop",
+    "pages/profile/profile",
+    "pages/profile-edit/profile-edit"
+  ],
+  "window": {
+    "navigationStyle": "custom"           
+  },
+  
+  "tabBar": {
+    "color": "#8B8B8B",
+    "selectedColor": "#000000",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "assets/icons/home.png",
+        "selectedIconPath": "assets/icons/home_selected.png",
+        "text": "home"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "iconPath": "assets/icons/shop.png",
+        "selectedIconPath": "assets/icons/shop_selected.png",
+        "text": "shop"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "iconPath": "assets/icons/profile.png",
+        "selectedIconPath": "assets/icons/profile_selected.png",
+        "text": "profile"
+      }
+    ]
+  }
+}

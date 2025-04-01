@@ -1,0 +1,5 @@
+<view class="card" style="width: {{width}}rpx; height: {{height}}rpx;">
+  <image class="icon" src="{{icon}}" />
+  <text class="title">{{title}}</text>
+  <text class="desc">{{desc}}</text>
+</view>

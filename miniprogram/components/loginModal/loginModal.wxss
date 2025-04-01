@@ -1,0 +1,94 @@
+.modal-mask {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* 让模态框覆盖整个屏幕 */
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.modal-container {
+  width: 100%;
+  height: 50vh; /* 让弹框高度为屏幕的一半 */
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 让内容居中 */
+  justify-content: flex-start; /* 让内容从顶部开始排布 */
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+}
+
+.modal-title, .modal-subtitle {
+  width: 100%; /* 让标题和副标题占满整行 */
+  text-align: center;
+  display: block; /* 确保文字在不同的行 */
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px; /* 适当调整间距 */
+}
+
+.modal-subtitle {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.phone-input, .code-input {
+  flex: 1;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 8px;
+}
+
+.wechat-btn {
+  background: #07c160;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.submit-btn {
+  width: 90%; /* 让按钮宽度更好看 */
+  background: #4A90E2;
+  color: white;
+  padding: 12px;
+  border-radius: 25px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.down-arrow {
+  margin-top: 50rpx;
+  width: 24px;
+  height: 24px;
+}

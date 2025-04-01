@@ -1,0 +1,44 @@
+<!--pages/profile-edit/profile-edit.wxml-->
+<view class="profile-edit-container">
+    <!-- 返回按钮 -->
+    <view class="back-btn" bindtap="goBack">
+        <image class="back-icon" src="/assets/icons/return.png"></image>
+    </view>
+
+    <!-- 头像区域 -->
+    <view class="avatar-container">
+      <image class="avatar" src="{{userInfo.avatar || '/assets/images/default_avatar.png'}}" bindtap="changeAvatar"></image>
+        <text class="membership-info">自 {{userInfo.joinDate || '未知时间'}} 起称为会员</text>
+        <text class="membership-id">No.{{userInfo.id || '000000'}}</text>
+    </view>
+
+    <!-- 个人信息表单 -->
+    <view class="form-container">
+        <view class="form-item">
+            <text class="label">名称</text>
+            <input class="input" value="{{userInfo.nickName || '请输入名称'}}" bindinput="updateNickname"/>
+        </view>
+
+        <view class="form-item">
+            <text class="label">性别</text>
+            <picker class="picker" mode="selector" range="{{genderOptions}}" value="{{userInfo.gender || 0}}" bindchange="updateGender">
+                <text>{{genderOptions[userInfo.gender || 0]}}</text>
+            </picker>
+        </view>
+
+        <view class="form-item">
+            <text class="label">手机</text>
+            <input class="input" type="number" value="{{userInfo.phone || '请输入手机号'}}" bindinput="updatePhone"/>
+        </view>
+
+        <view class="form-item">
+            <text class="label">生日</text>
+            <picker class="picker" mode="date" value="{{userInfo.birthday || '2000-01-01'}}" bindchange="updateBirthday">
+                <text>{{userInfo.birthday || '选择生日'}}</text>
+            </picker>
+        </view>
+    </view>
+
+    <!-- 保存按钮 -->
+    <button class="save-btn" bindtap="saveProfile">保存</button>
+</view>

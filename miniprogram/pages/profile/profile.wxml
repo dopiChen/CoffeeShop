@@ -1,0 +1,69 @@
+<view class="container">
+    <!-- Profile Card -->
+    <view class="profile-card">
+        <image class="background-img" src="/assets/images/profile_bk.jpg" mode="widthFix"></image>
+        <view class="profile-content">
+            <image class="avatar" src="{{userInfo.avatar || '/assets/images/default_avatar.jpeg'}}" bindtap="goToProfile"></image>
+            <text class="username" bindtap="goToProfile">{{userInfo.nickName || '尊贵的StarkBucks用户'}}</text>
+            <text class="subtext">为了更好的服务体验请授权登录</text>
+            <button class="login-btn" wx:if="{{!isLoggedIn}}" bindtap="openLoginModal">立即注册</button>
+        </view>
+    </view>
+    <!-- 登录注册组件 -->
+<loginModal showModal="{{showModal}}"  bind:onLoginSuccess="handleLoginSuccess" />
+
+      <!-- 记录栏 -->
+    <view class="stats-bar">
+        <view class="stat-item" bindtap="goToPoints">
+            <image class="stat-icon" src="/assets/icons/points.png"></image>
+            <text class="stat-label">积分</text>
+            <view class="stat-value-wrapper">
+                <text class="stat-value">{{points}}</text>
+                <text class="stat-arrow">›</text>
+            </view>
+        </view>
+        <view class="divider"></view>
+        <view class="stat-item" bindtap="goToBalance">
+            <image class="stat-icon" src="/assets/icons/balance.png"></image>
+            <text class="stat-label">余额</text>
+            <view class="stat-value-wrapper">
+                <text class="stat-value">{{balance}}</text>
+                <text class="stat-arrow">›</text>
+            </view>
+        </view>
+        <view class="divider"></view>
+        <view class="stat-item" bindtap="goToCoupons">
+            <image class="stat-icon" src="/assets/icons/coupons.png"></image>
+            <text class="stat-label">优惠券</text>
+            <view class="stat-value-wrapper">
+                <text class="stat-value">{{coupons}}</text>
+                <text class="stat-arrow">›</text>
+            </view>
+        </view>
+    </view>
+
+
+    <!-- 菜单项 -->
+    <view class="menu">
+        <view class="menu-item" bindtap="navigateToOrder">
+            <text>订单中心</text>
+            <text class="arrow">></text>
+        </view>
+        <view class="menu-item" bindtap="navigateToCoupons">
+            <text>卡券兑换</text>
+            <text class="arrow">></text>
+        </view>
+        <view class="menu-item" bindtap="navigateToProfile">
+            <text>个人信息</text>
+            <text class="arrow">></text>
+        </view>
+        <view class="menu-item" bindtap="navigateToSupport">
+            <text>客服中心</text>
+            <text class="arrow">></text>
+        </view>
+        <view class="menu-item" bindtap="navigateToLanguage">
+            <text>语言</text>
+            <text class="arrow">></text>
+        </view>
+    </view>
+</view>

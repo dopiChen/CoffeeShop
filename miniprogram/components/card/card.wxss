@@ -1,0 +1,27 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 20rpx; /* 圆角 */
+  box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.1); /* 立体阴影 */
+  padding: 20rpx;
+}
+
+.icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 10rpx;
+}
+
+.title {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.desc {
+  font-size: 24rpx;
+  color: #666;
+}

@@ -1,0 +1,36 @@
+<scroll-view class="container">
+  <!-- LOGO -->
+  <image class="logo" src="/assets/images/homelogo.png" mode="aspectFit"></image>
+
+
+  <!-- 三个小 Card -->
+  <view class="card-row">
+    <card width="180" height="180" icon="/assets/icons/self_pickup.png" title="自提" desc="门店自取"/>
+    <card width="180" height="180" icon="/assets/icons/surroundings.png" title="周边" desc="探索门店"/>
+    <card width="180" height="180" icon="/assets/icons/delivery.png" title="外卖" desc="送货上门"/>
+  </view>
+ <!-- 三个小 Card -->
+  <view class="special-card">
+    <image class="coffee-icon" src="/assets/icons/coffee-cup.png" mode="aspectFit"></image>
+    <view class="card-content">
+      <text class="small-text">限时抢购</text>
+      <text class="main-text">限时折扣券抢</text>
+      <text class="small-text">数量有限，赶紧行动</text>
+    </view>
+    <button class="buy-button">抢购</button>
+  </view>
+
+   <!-- 轮播图 -->
+   <view class="swiper-wrap">
+    <t-swiper
+      current="{{current}}"
+      autoplay="{{autoplay}}"
+      duration="{{duration}}"
+      interval="{{interval}}"
+      navigation="{{navigation}}"
+      imageProps="{{swiperImageProps}}"
+      list="{{imgSrcs}}"
+      bind:click="navToActivityDetail"
+    />
+  </view>
+</scroll-view>

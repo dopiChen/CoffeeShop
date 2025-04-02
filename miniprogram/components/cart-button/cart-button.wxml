@@ -1,0 +1,9 @@
+<!-- components/cart-button/index.wxml -->
+<view class="cart-wrap">
+  <image 
+    src="../../assets/icons/cart.png" 
+    class="cart-icon" 
+    bind:tap="navigateToCart"
+  />
+  <view class="badge" wx:if="{{count > 0}}">{{count}}</view>
+</view>

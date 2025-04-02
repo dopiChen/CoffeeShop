@@ -4,8 +4,15 @@
     "pages/order/order",
     "pages/shop/shop",
     "pages/profile/profile",
-    "pages/profile-edit/profile-edit"
+    "pages/profile-edit/profile-edit",
+    "pages/coupons/coupons",
+    "pages/points-detail/points-detail",
+    "pages/balance/balance",
+    "pages/cart/cart",
+    "pages/address/address"
+
   ],
+  
   "window": {
     "navigationStyle": "custom"           
   },

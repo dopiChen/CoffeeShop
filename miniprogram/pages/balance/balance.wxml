@@ -1,0 +1,21 @@
+<!-- pages/balance/index.wxml -->
+<view class="page-container">
+
+
+  <!-- 返回按钮 -->
+  <view class="back-btn" bindtap="goBack">
+        <image class="back-icon" src="/assets/icons/return.png"></image>
+ </view>
+  <!-- 余额概览 -->
+  <balance-header integerPart="{{balance.split('.')[0]}}" decimalPart="{{balance.split('.')[1] || '00'}}" />
+
+  <!-- 底部固定按钮 -->
+  <view class="footer">
+    <button 
+      class="recharge-btn"
+      bindtap="handleRecharge"
+    >
+      立即充值
+    </button>
+  </view>
+</view>

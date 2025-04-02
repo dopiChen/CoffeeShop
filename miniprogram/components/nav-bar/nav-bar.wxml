@@ -1,0 +1,7 @@
+<!-- components/nav-bar/index.wxml -->
+<view class="nav-bar">
+  <view class="back-btn" bindtap="handleBack">
+    <image class="back-icon" src="/assets/icons/return.png"></image>
+  </view>
+  <text class="title">{{title}}</text>
+</view>

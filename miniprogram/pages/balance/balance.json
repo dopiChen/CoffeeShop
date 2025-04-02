@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "balance-record ":"../../components/balance-record/balance-record",
+    "balance-header" :"../../components/balance-header/balance-header"
+  }
+}

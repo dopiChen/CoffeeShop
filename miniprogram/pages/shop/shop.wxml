@@ -1,2 +1,37 @@
 <!--pages/shop/shop.wxml-->
-<text>pages/shop/shop.wxml</text>
+<!-- pages/shop/shop.wxml -->
+<view class="shop-page">
+  <!-- 顶部搜索栏 -->
+  <view class="header">
+    <input class="search-input" placeholder="搜索商品" />
+    <cart-button />
+  </view>
+
+  <!-- 分类导航 -->
+  <scroll-view class="nav-scroll" scroll-x>
+    <view 
+      wx:for="{{categories}}" 
+      wx:key="id"
+      class="nav-item {{activeCategory === item.id ? 'active' : ''}}"
+      bind:tap="switchCategory"
+      data-id="{{item.id}}"
+    >
+      {{item.name}}
+    </view>
+  </scroll-view>
+
+  <!-- 商品列表 -->
+  <view class="product-grid">
+    <block wx:for="{{productList}}" wx:key="id">
+      <product-card 
+        item="{{item}}" 
+        bind:addcart="addToCart"
+      />
+    </block>
+  </view>
+
+  <!-- 加载状态 -->
+  <view class="loading" wx:if="{{loading}}">
+    <image src="../../assets/icons/loading.gif" class="loading-icon" />
+  </view>
+</view>

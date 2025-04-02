@@ -1,0 +1,17 @@
+<view class="coupon-card {{isExpired ? 'expired' : ''}}" bindtap="onTap">
+  <view class="left-panel">
+    <text class="amount">{{amount}}</text>
+    <text class="unit" wx:if="{{type === 'discount'}}">折</text>
+    <text class="unit" wx:else>元</text>
+  </view>
+  
+  <view class="right-panel">
+    <view class="condition-row">
+      <text class="title">{{title}}</text>
+      <text class="tag {{statusClass}}" wx:if="{{tagText}}">{{tagText}}</text>
+    </view>
+    <text class="condition">满{{threshold}}元使用</text>
+    <text class="valid-date">{{validDate}}</text>
+  </view>
+  
+</view>

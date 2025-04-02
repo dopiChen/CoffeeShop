@@ -1,0 +1,25 @@
+/* components/cart-button/index.wxss */
+.cart-wrap {
+  position: relative;
+  margin-left: 30rpx;
+}
+
+.cart-icon {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.badge {
+  position: absolute;
+  top: -10rpx;
+  right: -10rpx;
+  min-width: 30rpx;
+  height: 30rpx;
+  background: #EF233C;
+  color: #fff;
+  border-radius: 40rpx;
+  text-align: center;
+  line-height: 36rpx;
+  padding: 0 8rpx;
+  font-size: 20rpx;
+}

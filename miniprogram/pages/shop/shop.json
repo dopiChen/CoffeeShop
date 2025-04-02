@@ -1,3 +1,7 @@
+
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "product-card": "/components/product-card/product-card",
+    "cart-button": "/components/cart-button/cart-button"
+  }
 }

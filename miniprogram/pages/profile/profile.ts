@@ -3,9 +3,9 @@ Page({
   data: {
       userInfo: {},
       isLoggedIn: false,
-      points: 0,
-      balance: 0,
-      coupons: 0,
+      points: 80,
+      balance: 100,
+      coupons: 3,
       showModal: false
   },
   
@@ -42,9 +42,9 @@ Page({
           }
       });
   },
-  goToPoints() {
+  navigateToPoints() {
     wx.navigateTo({
-      url: '/pages/points/points'
+      url: '/pages/points-detail/points-detail'
     });
   },
   
@@ -60,11 +60,6 @@ Page({
     });
   },
 
-  goToProfile() {
-      wx.navigateTo({
-          url: '/miniprogram/pages/profile-edit/profile-edit'
-      });
-  },
 
   navigateToOrder() {
       wx.navigateTo({
@@ -83,7 +78,11 @@ Page({
           url: '/pages/profile-edit/profile-edit'
       });
   },
-
+  navigateToAddress() {
+    wx.navigateTo({
+        url: '/pages/address/address'
+    });
+},
   navigateToSupport() {
       wx.navigateTo({
           url: '/pages/support/support'

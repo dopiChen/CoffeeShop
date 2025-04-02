@@ -1,0 +1,15 @@
+<!-- components/balance-record/index.wxml -->
+<view class="record-item">
+  <image class="type-icon" src="{{type === 'income' ? '../../assets/icons/income.png' : '../../assets/icons/expense.png'}}"></image>
+  
+  <view class="content-wrapper">
+    <view class="main-info">
+      <text class="type-text">{{type === 'income' ? '充值加款' : '消费扣款'}}</text>
+      <text class="amount {{type}}">{{type === 'income' ? '+' : '-'}}{{amount}}</text>
+    </view>
+    <view class="sub-info">
+      <text class="time">{{time}}</text>
+      <text class="channel" wx:if="{{channel}}">{{channel}}</text>
+    </view>
+  </view>
+</view>

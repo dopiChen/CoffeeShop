@@ -1,0 +1,55 @@
+<!--pages/coupons/coupons.wxml-->
+
+ <!-- 返回按钮 -->
+ <view class="back-btn" bindtap="goBack">
+        <image class="back-icon" src="/assets/icons/return.png"></image>
+ </view>
+<!-- 骨架屏 -->
+<view wx:if="{{loading}}" class="skeleton-wrapper">
+  <view class="skeleton-tabs"></view>
+  <view wx:for="{{3}}" wx:key="index" class="skeleton-item">
+    <view class="skeleton-left"></view>
+    <view class="skeleton-right">
+      <view class="skeleton-line"></view>
+      <view class="skeleton-line"></view>
+      <view class="skeleton-line"></view>
+    </view>
+  </view>
+</view>
+
+<!-- 空状态 -->
+<view wx:elif="{{!loading && couponList.length === 0}}" class="empty-wrapper">
+  <image class="empty-image" src="/assets/images/empty-coupon.png"></image>
+  <text class="empty-text">暂时没有优惠券哦</text>
+  <view class="empty-btn" bindtap="goToGetCoupons">去领取</view>
+</view>
+
+<!-- 正常状态 -->
+<view wx:else class="container">
+  <scroll-view scroll-x class="filter-tabs">
+    <!-- 原有筛选标签 -->
+  </scroll-view>
+
+  <scroll-view 
+    scroll-y
+    class="coupon-list"
+    refresher-enabled
+    bindrefresherrefresh="onRefresh"
+    bindscrolltolower="loadMore">
+    
+    <coupon-card 
+      wx:for="{{couponList}}"
+      wx:key="id"
+      amount="{{item.amount}}"
+      type="{{item.type}}"
+      title="{{item.title}}"
+      threshold="{{item.threshold}}"
+      valid-date="{{item.validDate}}"
+      status-class="{{item.statusClass}}"
+      tag-text="{{item.tagText}}"
+      is-expired="{{item.isExpired}}"/>
+    
+    <view wx:if="{{loading}}" class="loading-text">加载中...</view>
+    <view wx:if="{{isEnd}}" class="end-text">没有更多了</view>
+  </scroll-view>
+</view>

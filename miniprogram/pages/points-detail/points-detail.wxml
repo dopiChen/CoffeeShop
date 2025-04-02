@@ -1,0 +1,37 @@
+<!-- pages/points-detail/index.wxml -->
+<view class="page-container">
+
+ <!-- 返回按钮 -->
+ <view class="back-btn" bindtap="goBack">
+        <image class="back-icon" src="/assets/icons/return.png"></image>
+ </view>
+  <!-- 加载动画 -->
+  <view wx:if="{{loading}}" class="loading-wrapper">
+    <image 
+      class="loading-icon"
+      src="/assets/icons/loading.gif" 
+      mode="aspectFit"
+    />
+    <text>loading...</text>
+  </view>
+
+  <!-- 内容区域 -->
+  <block wx:else>
+    <view class="header">
+      <text class="title">当前积分</text>
+      <text class="total-points">{{totalPoints}}</text>
+    </view>
+
+    <view class="record-list">
+      <points-record 
+        wx:for="{{records}}"
+        wx:key="id"
+        product="{{item.product}}"
+        points="{{item.points}}"
+        time="{{item.time}}"
+        type="{{item.type}}"
+        icon="{{item.icon}}"
+      />
+    </view>
+  </block>
+</view>

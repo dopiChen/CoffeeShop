@@ -1,0 +1,8 @@
+<!-- components/balance-header/index.wxml -->
+<view class="balance-container">
+  <text class="balance-label">当前余额（元）</text>
+  <view class="balance-value-wrapper">
+    <text class="balance-integer">{{ integerPart }}</text>
+    <text class="balance-decimal">.{{ decimalPart }}</text>
+  </view>
+</view>

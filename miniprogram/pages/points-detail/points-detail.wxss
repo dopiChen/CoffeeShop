@@ -1,0 +1,62 @@
+/* pages/points-detail/index.wxss */
+.page-container {
+  padding: 32rpx;
+  background: #f8f8f8;
+  min-height: 100vh;
+}
+
+.header {
+  background: #fff;
+  padding: 48rpx 32rpx;
+  border-radius: 16rpx;
+  margin-bottom: 32rpx;
+  text-align: center;
+  margin-top: 100rpx;
+}
+
+.title {
+  display: block;
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 16rpx;
+}
+
+.total-points {
+  font-size: 64rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+/* pages/points-detail/index.wxss */
+.loading-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200rpx;
+  margin-top: 100rpx;
+}
+
+.loading-icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 20rpx;
+}
+/* 返回按钮 */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  margin-bottom: 20rpx;
+}
+
+.back-icon {
+  width: 24px;
+  height: 24px;
+}

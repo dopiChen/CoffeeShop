@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "coupon-card": "/components/coupon-card/coupon-card",
+    "nav-bar":"/components/nav-bar/nav-bar"
+  },
+  "navigationBarTitleText": "我的优惠券",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#f5f5f5"
+}

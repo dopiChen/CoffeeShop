@@ -1,0 +1,68 @@
+<!--购物车详情页-->
+<!-- pages/cart/cart.wxml -->
+<view class="cart-page">
+  <view class="nav-container">
+  <view class="nav-bar">
+    <!-- 返回按钮 -->
+    <view class="nav-left" bindtap="goBack">
+      <image class="back-icon" src="/assets/icons/return.png" mode="widthFix"/>
+    </view>
+    
+    <!-- 标题 -->
+    <text class="nav-title">购物车</text>
+    
+    <!-- 编辑按钮 -->
+    <view class="nav-right">
+      <text class="edit-btn" bind:tap="toggleEditMode">{{isEditMode ? '完成' : '编辑'}}</text>
+    </view>
+  </view>
+</view>
+
+  <!-- 商品列表 -->
+  <scroll-view class="cart-list" scroll-y>
+    <view wx:for="{{cartItems}}" wx:key="id" class="cart-item">
+      <view class="item-left">
+        <checkbox class="checkbox" checked="{{item.checked}}" bind:tap="toggleCheck" data-index="{{index}}"/>
+        <image class="item-image" src="{{item.image}}" mode="aspectFill"/>
+      </view>
+      
+      <view class="item-info">
+        <text class="item-title">{{item.name}}</text>
+        <text class="item-spec" wx:if="{{item.spec}}">规格：{{item.spec}}</text>
+        <view class="price-line">
+          <text class="price">¥{{item.price}}</text>
+          <view class="stepper">
+            <text class="icon-minus" bind:tap="changeCount" data-index="{{index}}" data-type="minus">-</text>
+            <text class="count">{{item.count}}</text>
+            <text class="icon-plus" bind:tap="changeCount" data-index="{{index}}" data-type="plus">+</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{cartItems.length === 0}}" class="empty-tip">
+      <image src="../../assets/images/empty-cart.png" class="empty-image"/>
+      <text class="empty-text">购物车是空的哦~</text>
+    </view>
+  </scroll-view>
+
+  <!-- 底部结算栏 -->
+  <view class="footer">
+    <view class="footer-left">
+      <checkbox class="checkbox" checked="{{allChecked}}" bind:tap="toggleAllCheck"/>全选
+    </view>
+    
+    <view class="footer-right" wx:if="{{!isEditMode}}">
+      <text class="total">合计：¥{{totalPrice}}</text>
+      <view class="submit-btn" bind:tap="handleCheckout">
+        结算({{checkedCount}})
+      </view>
+    </view>
+
+    <view class="footer-right" wx:else>
+      <view class="delete-all-btn" bind:tap="deleteCheckedItems">
+        删除选中
+      </view>
+    </view>
+  </view>
+</view>

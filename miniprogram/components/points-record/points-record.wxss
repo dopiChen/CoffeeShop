@@ -1,0 +1,51 @@
+/* components/points-record/index.wxss */
+.record-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  background: #fff;
+  margin-bottom: 16rpx;
+  border-radius: 12rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.05);
+}
+
+.product-icon {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 8rpx;
+  margin-right: 24rpx;
+}
+
+.content {
+  flex: 1;
+}
+
+.product-name {
+  font-size: 32rpx;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+.time {
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.points {
+  font-size: 36rpx;
+  font-weight: 500;
+}
+
+.points.add {
+  color: #09bb07;
+}
+
+.points.reduce {
+  color: #e64340;
+}
+
+.symbol {
+  font-size: 28rpx;
+  margin-right: 8rpx;
+}

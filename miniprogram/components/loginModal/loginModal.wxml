@@ -25,7 +25,7 @@
       </view>
 
 
-      <button class="submit-btn" bindtap="verifyCode">注册并登陆</button>
+      <button class="submit-btn" bindtap="verifyCode">登陆</button>
       <text class="resend-text" wx:if="{{countdown === 0}}" bindtap="sendVerificationCode">重新发送</text>
     </view>
   </view>

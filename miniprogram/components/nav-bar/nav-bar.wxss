@@ -1,0 +1,41 @@
+/* components/nav-bar/index.wxss */
+.nav-bar {
+  position: relative;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  box-shadow: 0 4rpx 20rpx rgba(0,0,0,0.1);
+  border-radius: 0 0 16rpx 16rpx;
+  margin-top: 50rpx;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 2rpx 2rpx 4rpx rgba(0,0,0,0.1);
+  letter-spacing: 2rpx;
+}
+
+.back-btn {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 32rpx;
+  z-index: 2;
+}
+
+.back-icon {
+  width: 40rpx;
+  height: 40rpx;
+}

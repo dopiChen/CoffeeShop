@@ -2,12 +2,14 @@
   "name": "miniprogram-ts-quickstart",
   "version": "1.0.0",
   "description": "",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "",
   "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "readline": "^1.3.0"
   },
   "devDependencies": {
     "miniprogram-api-typings": "^2.8.3-1"

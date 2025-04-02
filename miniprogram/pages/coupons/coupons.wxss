@@ -1,0 +1,94 @@
+/* pages/coupons/coupons.wxss */
+
+/* 骨架屏样式 */
+.skeleton-wrapper {
+  padding: 20rpx;
+}
+
+.skeleton-tabs {
+  height: 80rpx;
+  background: #f5f5f5;
+  border-radius: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+.skeleton-item {
+  height: 180rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-left {
+  width: 30%;
+  background: linear-gradient(90deg, #f5f5f5 25%, #e0e0e0 50%, #f5f5f5 75%);
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+.skeleton-right {
+  flex: 1;
+  padding: 20rpx;
+}
+
+.skeleton-line {
+  height: 30rpx;
+  background: #f5f5f5;
+  margin-bottom: 20rpx;
+  border-radius: 8rpx;
+}
+
+/* 空状态样式 */
+.empty-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200rpx;
+}
+
+.empty-image {
+  width: 150rpx;
+  height: 150rpx;
+  margin-bottom: 40rpx;
+}
+
+.empty-text {
+  color: #999;
+  font-size: 28rpx;
+  margin-bottom: 40rpx;
+}
+
+.empty-btn {
+  padding: 16rpx 48rpx;
+  border-radius: 40rpx;
+  background: #07c160;
+  color: #fff;
+  font-size: 28rpx;
+}
+
+/* 返回按钮 */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+}
+
+.back-icon {
+  width: 24px;
+  height: 24px;
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}

@@ -1,0 +1,114 @@
+.coupon-card {
+  display: flex;
+  height: 180rpx;
+  margin: 20rpx;
+  border-radius: 16rpx;
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+}
+
+/* 过期状态 */
+.coupon-card.expired {
+  background: #F5F5F5;
+  filter: grayscale(80%);
+}
+
+.left-panel {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+
+.left-panel::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 2rpx;
+  background: rgba(255,255,255,0.3);
+}
+
+.expired .left-panel {
+  color: #999;
+}
+
+.amount {
+  font-size: 48rpx;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.unit {
+  font-size: 24rpx;
+}
+
+.right-panel {
+  flex: 1;
+  padding: 24rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.condition-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 32rpx;
+  color: #333;
+  max-width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tag {
+  font-size: 22rpx;
+  padding: 4rpx 12rpx;
+  border-radius: 24rpx;
+}
+
+.tag.active {
+  background: #07C160;
+  color: #fff;
+}
+
+.tag.expired {
+  background: #FF4949;
+  color: #fff;
+}
+
+.condition {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.valid-date {
+  font-size: 22rpx;
+  color: #999;
+}
+
+.corner-icon {
+  position: absolute;
+  right: -40rpx;
+  top: -40rpx;
+  width: 80rpx;
+  height: 80rpx;
+  opacity: 0.8;
+}
+
+.corner-image {
+  width: 100%;
+  height: 100%;
+}

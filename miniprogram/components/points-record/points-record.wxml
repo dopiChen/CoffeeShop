@@ -1,0 +1,13 @@
+<!-- components/points-record/index.wxml -->
+
+<view class="record-item {{type}}">
+  <image class="product-icon" src="{{icon}}"></image>
+  <view class="content">
+    <text class="product-name">{{product}}</text>
+    <text class="time">{{time}}</text>
+  </view>
+  <view class="points">
+    <text class="symbol">{{symbol}}</text>
+    {{points}}
+  </view>
+</view>

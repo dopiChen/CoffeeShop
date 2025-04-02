@@ -3,7 +3,7 @@
     <view class="profile-card">
         <image class="background-img" src="/assets/images/profile_bk.jpg" mode="widthFix"></image>
         <view class="profile-content">
-            <image class="avatar" src="{{userInfo.avatar || '/assets/images/default_avatar.jpeg'}}" bindtap="goToProfile"></image>
+            <image class="avatar" src="{{userInfo.avatar || '/assets/images/default_avatar.jpeg'}}" bindtap="navigateToProfile"></image>
             <text class="username" bindtap="goToProfile">{{userInfo.nickName || '尊贵的StarkBucks用户'}}</text>
             <text class="subtext">为了更好的服务体验请授权登录</text>
             <button class="login-btn" wx:if="{{!isLoggedIn}}" bindtap="openLoginModal">立即注册</button>
@@ -14,7 +14,7 @@
 
       <!-- 记录栏 -->
     <view class="stats-bar">
-        <view class="stat-item" bindtap="goToPoints">
+        <view class="stat-item" bindtap="navigateToPoints">
             <image class="stat-icon" src="/assets/icons/points.png"></image>
             <text class="stat-label">积分</text>
             <view class="stat-value-wrapper">
@@ -55,6 +55,10 @@
         </view>
         <view class="menu-item" bindtap="navigateToProfile">
             <text>个人信息</text>
+            <text class="arrow">></text>
+        </view>
+        <view class="menu-item" bindtap="navigateToAddress">
+            <text>地址管理</text>
             <text class="arrow">></text>
         </view>
         <view class="menu-item" bindtap="navigateToSupport">

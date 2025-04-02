@@ -1,0 +1,30 @@
+/* components/balance-header/index.wxss */
+.balance-container {
+  padding: 40rpx 32rpx;
+  background: #fff;
+  box-shadow: 0 8rpx 40rpx rgba(0,0,0,0.05);
+  margin-top: 150rpx;
+}
+
+.balance-label {
+  font-size: 28rpx;
+  color: #999;
+  display: block;
+  margin-bottom: 16rpx;
+}
+
+.balance-value-wrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+.balance-integer {
+  font-size: 64rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.balance-decimal {
+  font-size: 36rpx;
+  color: #666;
+}

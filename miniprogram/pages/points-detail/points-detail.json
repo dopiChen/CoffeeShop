@@ -1,0 +1,7 @@
+
+{
+  "usingComponents": {
+    "points-record": "/components/points-record/points-record"
+  },
+  "enablePullDownRefresh": true
+}

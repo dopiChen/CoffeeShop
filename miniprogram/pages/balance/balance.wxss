@@ -1,0 +1,55 @@
+/* pages/balance/index.wxss */
+.page-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.record-scroll {
+  flex: 1;
+  height: 1px; /* 修复iOS滚动问题 */
+}
+
+.footer {
+  padding: 24rpx 32rpx;
+  background: #fff;
+  box-shadow: 0 -4rpx 20rpx rgba(0,0,0,0.05);
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+}
+
+.recharge-btn {
+  background: #07c160;
+  color: white;
+  border-radius: 48rpx;
+  font-size: 32rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  width: 100%;
+  transition: opacity 0.3s;
+}
+
+.recharge-btn:active {
+  opacity: 0.8;
+}
+
+
+/* 返回按钮 */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+}
+
+.back-icon {
+  width: 24px;
+  height: 24px;
+}

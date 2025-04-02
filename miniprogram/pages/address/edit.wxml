@@ -1,0 +1,23 @@
+<!-- pages/address/edit.wxml -->
+<view class="edit-page">
+  <form bindsubmit="saveAddress">
+    <view class="form-item">
+      <input name="name" placeholder="收货人姓名" value="{{editData.name}}"/>
+    </view>
+    <view class="form-item">
+      <input name="phone" type="number" placeholder="手机号码" value="{{editData.phone}}"/>
+    </view>
+    <view class="form-item location" bindtap="chooseLocation">
+      <text class="label">所在地区</text>
+      <text class="value">{{locationText || '点击选择位置'}}</text>
+    </view>
+    <view class="form-item">
+      <textarea name="detail" placeholder="详细地址" value="{{editData.detail}}"/>
+    </view>
+    <view class="form-item default">
+      <text>设为默认地址</text>
+      <switch checked="{{editData.isDefault}}" bindchange="toggleDefault"/>
+    </view>
+    <button form-type="submit" class="submit-btn">保存地址</button>
+  </form>
+</view>

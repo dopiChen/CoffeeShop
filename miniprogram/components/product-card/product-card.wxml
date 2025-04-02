@@ -1,0 +1,27 @@
+<!-- components/product-card/index.wxml -->
+<view class="product-card {{item.stock === 0 ? 'disabled' : ''}}">
+  <image class="cover" src="{{item.image}}" mode="aspectFill" />
+  
+  <view class="info">
+    <text class="name">{{item.name}}</text>
+    
+    <view class="price-line">
+      <text class="price">¥{{item.price}}</text>
+      <text class="sales">已售{{item.sales}}+</text>
+    </view>
+
+    <view class="action-bar">
+      <view class="tags">
+        <text class="tag" wx:if="{{item.stock < 5}}">限量供应</text>
+        <text class="tag" wx:if="{{item.stock === 0}}">已售罄</text>
+      </view>
+      <button 
+        class="cart-btn" 
+        hover-class="none"
+        bind:tap="handleAddCart"
+      >
+        <image src="../../assets/icons/cart-add.png" class="cart-icon" />
+      </button>
+    </view>
+  </view>
+</view>
